@@ -14,47 +14,27 @@ public class GameManager : MonoBehaviour
 	private Goal goal_;
 
 	[SerializeField]
+	private GameClear gameClear_;
+
+	[SerializeField]
 	private Player player_;
-
-	private enum GameState
-	{
-		STOP,
-		PLAYING,
-		GOAL
-	}
-	private GameState game_state_;
-
 
 	private void Awake()
 	{
 		minimapManager_.Init(player_);
+		goal_.Init(GoalCallback);
+		gameClear_.Init();
 	}
 
-	private void Update()
+	private void Start()
 	{
-		switch(game_state_)
-		{
-			case GameState.PLAYING :
-				Update_Playing(); break;
-			case GameState.STOP:
-				Update_Stop(); break;
-			case GameState.GOAL:
-				Update_Goal(); break;
-		}
+		timer_.SetTimer(true);
 	}
 
-	private void Update_Stop()
+	private void GoalCallback()
 	{
-		timer_.StopTimer();
-	}
-
-	private void Update_Playing()
-	{
-		timer_.StartTimer();
-	}
-
-	private void Update_Goal()
-	{
-		timer_.StopTimer();
+		gameClear_.Clear();
+		player_.StopMove();
+		timer_.SetTimer(false);
 	}
 }

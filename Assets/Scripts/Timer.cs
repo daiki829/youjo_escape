@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
@@ -15,18 +13,27 @@ public class Timer : MonoBehaviour
 	{
 		if (on_countup)
 		{
-			timer_value += Time.deltaTime;
-			timer_text.text = timer_value.ToString();
+			TimerUpdate();
 		}
 	}
 
-	public void StartTimer()
+	public void SetTimer(bool flag)
 	{
-		on_countup = true;
+		on_countup = flag;
 	}
 
-	public void StopTimer()
+	public int GetTime()
 	{
-		on_countup = false;
+		return (int)timer_value;
+	}
+
+	private void TimerUpdate()
+	{
+		timer_value += Time.deltaTime;
+
+		string second = ((int)(timer_value % 60)).ToString("00");
+		string minute = ((int)(timer_value / 60)).ToString("00");
+
+		timer_text.text = minute + ":" + second;
 	}
 }

@@ -61,11 +61,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\GameClear.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Goal.cs" />
-    <Compile Include="Assets\Scripts\MinimapCell.cs" />
     <Compile Include="Assets\Scripts\MinimapManager.cs" />
-    <Compile Include="Assets\Scripts\MovePath.cs" />
+    <Compile Include="Assets\Scripts\MovePosition.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\TileCell.cs" />
     <Compile Include="Assets\Scripts\TileManager.cs" />
