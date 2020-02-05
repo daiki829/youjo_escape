@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 	private Rigidbody2D rigidbody_;
 
 	[SerializeField]
-	private float move_speed;
+	float move_speed;
 
 	private void Update()
 	{

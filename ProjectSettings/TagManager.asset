@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - MainCameraInvisible
-  - MinimapCameraInvisible
+  - CameraInvisible
+  - 
   - 
   - 
   - 
