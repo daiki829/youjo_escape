@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\MovePath.cs" />
     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Sample.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\TileCell.cs" />
     <Compile Include="Assets\Scripts\TileManager.cs" />
