@@ -70,6 +70,8 @@
     <Compile Include="Assets\Scripts\TileCell.cs" />
     <Compile Include="Assets\Scripts\TileManager.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
+    <Compile Include="Assets\Scripts\TitleManager.cs" />
+    <Compile Include="Assets\Scripts\TrackingCamera.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/daiki/Desktop/koukousei_projects/youjo_escape/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
